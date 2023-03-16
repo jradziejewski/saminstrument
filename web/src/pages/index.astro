@@ -1,9 +1,14 @@
 ---
 // Component Imports
-import Counter from '../components/Counter';
-const someProps = {
-	count: 0,
-};
+import { css, ThemeProvider } from '@mui/material/styles';
+import { theme } from "../themes";
+import Main from '../components/Main';
+import { Grid } from '@mui/material';
+import "../styles/global.css";
+
+const cssik = css({
+	backgroundColor: "pink"
+});
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
@@ -15,6 +20,7 @@ const someProps = {
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<title>SAMI</title>
 		<style>
 			html,
 			body {
@@ -27,10 +33,12 @@ const someProps = {
 		</style>
 	</head>
 	<body>
-		<main>
-			<Counter {...someProps} client:visible>
-				<h1>Hello, React!</h1>
-			</Counter>
-		</main>
+		<ThemeProvider theme={theme}>
+			<div class="centered">
+				<Main client:visible>
+					<h1>Hello, React!</h1>
+				</Main>
+			</div>
+		</ThemeProvider>
 	</body>
 </html>

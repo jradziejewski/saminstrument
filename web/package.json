@@ -10,11 +10,16 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/react": "^2.0.2",
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@mui/material": "^5.11.13",
+    "@mui/styled-engine": "^5.11.11",
+    "@mui/system": "^5.11.13",
+    "@types/react": "^18.0.10",
+    "@types/react-dom": "^18.0.5",
     "astro": "^2.0.18",
     "react": "^18.1.0",
-    "react-dom": "^18.1.0",
-    "@astrojs/react": "^2.0.2",
-    "@types/react": "^18.0.10",
-    "@types/react-dom": "^18.0.5"
+    "react-dom": "^18.1.0"
   }
 }
