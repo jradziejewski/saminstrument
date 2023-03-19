@@ -22,4 +22,4 @@ Smart Atmospheric Meteorological Instrument
 
 ## Database diagram
 
-![diagram](https://github.com/jradziejewski/saminstrument/blob/master/diagram.png?raw=true)
+![diagram](images/diagram.png)
