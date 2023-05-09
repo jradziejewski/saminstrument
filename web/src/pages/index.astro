@@ -21,24 +21,10 @@ const cssik = css({
 		<meta name="generator" content={Astro.generator} />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<title>SAMI</title>
-		<style>
-			html,
-			body {
-				font-family: system-ui;
-				margin: 0;
-			}
-			body {
-				padding: 2rem;
-			}
-		</style>
 	</head>
 	<body>
 		<ThemeProvider theme={theme}>
-			<div class="centered">
-				<Main client:visible>
-					<h1>Hello, React!</h1>
-				</Main>
-			</div>
+				<Main client:visible/>
 		</ThemeProvider>
 	</body>
 </html>
