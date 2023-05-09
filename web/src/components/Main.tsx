@@ -19,11 +19,9 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 function Copyright() {
   return (
     <Typography variant="body2" color="text.secondary" align="center">
-      <Link
-        color="inherit"
-        href="https://github.com/jradziejewski/saminstrument"
-      >
-        SAMInstrument
+      {"Copyright © "}
+      <Link color="inherit" href="https://mui.com/">
+        Your Website
       </Link>{" "}
       {new Date().getFullYear()}
       {"."}
@@ -31,32 +29,11 @@ function Copyright() {
   );
 }
 
-const cards = [
-  {
-    id: 1,
-    img: "https://www.publichealthpost.org/wp-content/uploads/2020/07/1-1.png",
-    heading: "Humidity",
-  },
-  {
-    id: 2,
-    img: "https://images.unsplash.com/photo-1505672678657-cc7037095e60?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8d2luZHxlbnwwfHwwfHw%3D&w=1000&q=80",
-    heading: "Wind",
-  },
-  {
-    id: 3,
-    img: "https://cdn.mos.cms.futurecdn.net/jqkeHZrc7H2qJGzQkfkgnX.jpg",
-    heading: "Temperature",
-  },
-  {
-    id: 4,
-    img: "https://images.nationalgeographic.org/image/upload/t_edhub_resource_key_image/v1652341228/EducationHub/photos/barometer.jpg",
-    heading: "Barometric pressure",
-  },
-];
+const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 const theme = createTheme();
 
-export default function Main() {
+export default function Album() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -64,7 +41,7 @@ export default function Main() {
         <Toolbar>
           <CameraIcon sx={{ mr: 2 }} />
           <Typography variant="h6" color="inherit" noWrap>
-            SAM Instrument
+            Album layout
           </Typography>
         </Toolbar>
       </AppBar>
@@ -85,7 +62,7 @@ export default function Main() {
               color="text.primary"
               gutterBottom
             >
-              SAM Instrument
+              Album layout
             </Typography>
             <Typography
               variant="h5"
@@ -93,13 +70,9 @@ export default function Main() {
               color="text.secondary"
               paragraph
             >
-              The Smart Atmospheric Meteorological Instrument is a powerful tool
-              that allows for accurate and real-time monitoring of atmospheric
-              conditions. With the ability to measure wind, humidity,
-              temperature, and barometric pressure and save it to a database,
-              this device is a must-have for weather stations, research
-              facilities, and other applications where precise environmental
-              data is essential.
+              Something short and leading about the collection below—its
+              contents, the creator, etc. Make it short and sweet, but not too
+              short so folks don&apos;t simply skip over it entirely.
             </Typography>
             <Stack
               sx={{ pt: 4 }}
@@ -107,8 +80,8 @@ export default function Main() {
               spacing={2}
               justifyContent="center"
             >
-              <Button variant="contained">Go to API</Button>
-              <Button variant="outlined">GITHUB</Button>
+              <Button variant="contained">Main call to action</Button>
+              <Button variant="outlined">Secondary action</Button>
             </Stack>
           </Container>
         </Box>
@@ -116,7 +89,7 @@ export default function Main() {
           {/* End hero unit */}
           <Grid container spacing={4}>
             {cards.map((card) => (
-              <Grid item key={card.id} xs={12} sm={6} md={3}>
+              <Grid item key={card} xs={12} sm={6} md={4}>
                 <Card
                   sx={{
                     height: "100%",
@@ -126,18 +99,25 @@ export default function Main() {
                 >
                   <CardMedia
                     component="img"
-                    sx={{ width: 200, height: 150 }}
-                    image={card.img}
+                    sx={{
+                      // 16:9
+                      pt: "56.25%",
+                    }}
+                    image="https://source.unsplash.com/random"
                     alt="random"
                   />
                   <CardContent sx={{ flexGrow: 1 }}>
                     <Typography gutterBottom variant="h5" component="h2">
-                      {card.heading}
+                      Heading
+                    </Typography>
+                    <Typography>
+                      This is a media card. You can use this section to describe
+                      the content.
                     </Typography>
                   </CardContent>
                   <CardActions>
-                    {/* <Button size="small">View</Button>
-                    <Button size="small">Edit</Button> */}
+                    <Button size="small">View</Button>
+                    <Button size="small">Edit</Button>
                   </CardActions>
                 </Card>
               </Grid>
@@ -148,7 +128,7 @@ export default function Main() {
       {/* Footer */}
       <Box sx={{ bgcolor: "background.paper", p: 6 }} component="footer">
         <Typography variant="h6" align="center" gutterBottom>
-          SAMI
+          Footer
         </Typography>
         <Typography
           variant="subtitle1"
@@ -156,7 +136,7 @@ export default function Main() {
           color="text.secondary"
           component="p"
         >
-          Smart Atmospheric Meteorological Instrument
+          Something here to give the footer a purpose!
         </Typography>
         <Copyright />
       </Box>
