@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import AppBar from "@mui/material/AppBar";
 import Button from "@mui/material/Button";
 import CameraIcon from "@mui/icons-material/PhotoCamera";
@@ -50,7 +50,7 @@ const cards = [
   {
     id: 4,
     img: "https://images.nationalgeographic.org/image/upload/t_edhub_resource_key_image/v1652341228/EducationHub/photos/barometer.jpg",
-    heading: "Barometric pressure",
+    heading: "Pressure",
   },
 ];
 
