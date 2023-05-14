@@ -1,6 +1,6 @@
 # SAM Instrument
 
-## [saminstrument.netlify.app](saminstrument.netlify.app)
+## [https://saminstrument.netlify.app](saminstrument.netlify.app)
 
 Smart Atmospheric Meteorological Instrument
 
