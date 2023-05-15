@@ -1,5 +1,7 @@
 # SAM Instrument
 
+## [https://saminstrument.netlify.app](https://saminstrument.netlify.app)
+
 Smart Atmospheric Meteorological Instrument
 
 ## Harmonogram
