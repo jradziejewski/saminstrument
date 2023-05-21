@@ -4,7 +4,7 @@ import { Table, TableContainer, Paper } from "@mui/material";
 export default function DataTable({ children }) {
   return (
     <TableContainer
-      sx={{ maxWidth: 500, marginLeft: 15, marginTop: 10 }}
+      sx={{ maxWidth: 850, marginLeft: 15, marginTop: 15, marginBottom: 5 }}
       component={Paper}
     >
       <Table aria-label="simple table">{children}</Table>

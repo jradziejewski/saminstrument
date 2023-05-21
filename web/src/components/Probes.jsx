@@ -2,14 +2,14 @@ import { useEffect, useState } from "react";
 import DataTable from "./DataTable";
 import { TableHead, TableRow, TableCell, TableBody, Grid } from "@mui/material";
 
-export default function Users() {
+export default function Probes() {
   const [data, setData] = useState([]);
   useEffect(() => {
     logJSONData();
   }, []);
 
   async function logJSONData() {
-    const url = "https://czujnikwiatru.pythonanywhere.com/api/users";
+    const url = "https://czujnikwiatru.pythonanywhere.com/api/probes";
 
     const response = await fetch(url, {
       method: "GET",
@@ -25,7 +25,9 @@ export default function Users() {
           <TableHead>
             <TableRow>
               <TableCell>ID</TableCell>
-              <TableCell>Username</TableCell>
+              <TableCell>Probe name</TableCell>
+              <TableCell>User ID</TableCell>
+              <TableCell>Update interval</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -33,7 +35,9 @@ export default function Users() {
               return (
                 <TableRow key={entry.id}>
                   <TableCell>{entry.id}</TableCell>
-                  <TableCell>{entry.username}</TableCell>
+                  <TableCell>{entry.probe_name}</TableCell>
+                  <TableCell>{entry.user_id}</TableCell>
+                  <TableCell>{entry.update_interval}</TableCell>
                 </TableRow>
               );
             })}
