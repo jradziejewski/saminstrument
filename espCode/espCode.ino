@@ -12,8 +12,8 @@ String serverName = "https://czujnikwiatru.pythonanywhere.com/api/measurements";
 void setupWifi()
 {
   WiFi.mode(WIFI_STA);
-  const char* ssid = "Orange_Swiatlowod_5A00";  // Enter SSID here
-  const char* password = "s5uWjGro6g6w24QXxQ";  //Enter Password here
+  const char* ssid = "";  // Enter SSID here
+  const char* password = "";  //Enter Password here
   WiFiMulti.addAP(ssid, password);
 
   // wait for WiFi connection
@@ -43,7 +43,6 @@ void postToServer()
     doc["barometric_pressure"] = generateData();
     doc["cloudiness"] =  generateData();
     doc["external_temperature"] = generateData();
-    //doc["id"] = generateData();
     doc["location"] = NULL;
     doc["measurement_timestamp"] = NULL;
     doc["probe_id"] = 1;
