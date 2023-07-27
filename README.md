@@ -26,7 +26,6 @@ Smart Atmospheric Meteorological Instrument
 
 ## Program Code
 ```
-
 #include <Arduino.h>
 #include <WiFiMulti.h>
 #include <HTTPClient.h>
