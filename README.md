@@ -101,30 +101,3 @@ void loop()
   postToServer();
 }
 ```
-
-## Schematic
-
-![diagram](images/schematic.png)
-
-Resistors used are 10kOhm.
-### Connections:
-* BMP280:
-  * VIN -> 3V3 BUS
-  * GND -> GND BUS
-  * SCK -> ESP32: D22
-  * SDI -> ESP32: D21
-* HMC5883L:
-  * VCC -> 3V3 BUS
-  * GND -> GND BUS
-  * SCK -> ESP32: D22
-  * SDI -> ESP32: D21
-* IR Break Beam Sensor:
-  * VCC -> 3V3 BUS (both)
-  * GND -> GND BUS (both)
-  * SIG -> GPIO16 [^1]
-* Photocell:
-  * One leg connected to GPIO4  [^1]
-* Thermistor:
-  * One leg connected to GPIO26  [^1]
-
- [^1]: You can choose any GPIO port available
